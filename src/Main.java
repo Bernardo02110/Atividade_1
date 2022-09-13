@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -5,11 +7,14 @@ public class Main {
     Natal papainoel = new Natal("SantaClaus");
     Aniversario niver = new Aniversario("Bernardo");
 
+    ArrayList<CartaoWeb> mensagens = new ArrayList<>();
 
-    amor.showMessage();
-    System.out.println("\n");
-    papainoel.showMessage();
-    System.out.println("\n");
-    niver.showMessage();
+    mensagens.add(amor);
+    mensagens.add(papainoel);
+    mensagens.add(niver);
+
+        for (int i=1; i<mensagens.size(); i++) {
+            mensagens.get(i).showMessage();
+        }
     }
 }
